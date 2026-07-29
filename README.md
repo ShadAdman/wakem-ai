@@ -52,13 +52,20 @@ Manage your development environments.
 *   `config-runtime`: Specify which models are preferred for this specific project.
 
 ### `wakem prompt`
-Manage the "briefing" text sent to models during warmup.
+Manage the "briefing" text sent to models during warmup. Be careful about your prompts. if you provide generative prompts that's on you.
 *   `add "text"`: Add a new warmup instruction.
 *   `list`: Review current prompts.
 *   `delete <id>`: Remove old prompts.
 
+**Effective Warmup Prompt Examples:**
+- `wakem prompt add "Review the current project dependencies and structure to provide context-aware suggestions."`
+- `wakem prompt add "Familiarize yourself with the established coding patterns and testing strategies used here."`
+- `wakem prompt add "Prepare for a deep dive into the business logic and API endpoints defined in this repository."`
+- `wakem prompt add "Ready yourself for troubleshooting and bug-fixing tasks by indexing the core modules."`
+
+
 ### `wakem warm`
-The core action. Manually triggers the prediction and loading of models for the current project. Use this just before you start a task.
+The core action. Manually triggers the loading of models, skill files and runs the prompts for the current project. Use this just before you start a task.
 
 ### `wakem runtime`
 Control your AI backend (default is Ollama).
@@ -66,6 +73,7 @@ Control your AI backend (default is Ollama).
 *   `models`: List all models available for warming.
 *   `config-url`: Set a custom API endpoint (e.g., a remote GPU server).
 
+[Alpha]
 ### `wakem daemon`
 The "Set it and Forget it" mode. Starts a background process that periodically checks your active project and ensures the models are warmed up without manual intervention.
 
