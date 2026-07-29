@@ -4,3 +4,6 @@
 [submodule "wakem-r"]
 	path = wakem-r
 	url = git@github.com:ShadAdman/wakem-r.git
+[submodule "wakem-g"]
+	path = wakem-g
+	url = git@github.com:ShadAdman/wakem-g.git
