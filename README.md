@@ -77,6 +77,10 @@ Control your AI backend (default is Ollama).
 ### `wakem daemon`
 The "Set it and Forget it" mode. Starts a background process that periodically checks your active project and ensures the models are warmed up without manual intervention.
 
+### What's Next?
+- `wakem recap`: Daily Recap (reports a summary of your last work by scanning git commits).
+- `wakem sch`: Schedule warming up (set recurring schedules like `EVERY_DAY` at a specific time or trigger `ON_STARTUP` to ensure readiness upon boot).
+
 ---
 
 ## Implementations
