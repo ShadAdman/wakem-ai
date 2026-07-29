@@ -1,8 +1,8 @@
 <h1 align="center">wakem</h1>
 
-<p align="center">
-  ![D](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3hkNTM0ZHZ5dmI3cmxtM3pvMGl2OHg1bm9yeHlxYjNycGZ1MXZtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mq6SsYiNPl1WGiiZmk/giphy.gif)
-</p>
+
+  ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3hkNTM0ZHZ5dmI3cmxtM3pvMGl2OHg1bm9yeHlxYjNycGZ1MXZtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mq6SsYiNPl1WGiiZmk/giphy.gif)
+
 
 <p align="center">
   <b>The official wakem ecosystem</b>
