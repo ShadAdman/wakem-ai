@@ -1,7 +1,7 @@
 <h1 align="center">wakem</h1>
 
 <p align="center">
-  <video src="wakem.mp4" width="800" autoplay loop muted></video>
+  <video src="wakem.mp4" width="800" autoplay loop muted playsinline controls></video>
 </p>
 <p align="center"><i>(Demo video - optimized for 2x playback speed internally)</i></p>
 
