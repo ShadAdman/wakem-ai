@@ -15,12 +15,12 @@
 
 **Wakem** is a specialized CLI infrastructure tool designed for **Predictive AI Warmup**. 
 
-If you use local AI models (like Ollama, Llama.cpp, or LocalAI), you've likely experienced the "cold start" problem: the first time you ask a question, you wait several seconds for the model to load into VRAM and process the initial context. 
+If you use local AI models (like Ollama, Llama.cpp, or LocalAI), you've likely experienced the "cold start" problem: the first time you ask a question or even sending just a hi, you wait several seconds for the model to load into VRAM and process the initial context. 
 
 **Wakem eliminates this wait.** It acts as a bridge between your intent to work and your AI's readiness. By the time you start your IDE or terminal, Wakem has already:
-1. Predicted which model you'll need.
-2. Loaded that model into VRAM.
-3. Primed it with your project's files, skills (Markdown files), and your specified prompts.
+1. Loaded the models into VRAM.
+2. Primed them with your project's files, skills (Markdown files), and your specified prompts. 
+3. Predicts which model you'll need based on some predefined rules.
 
 ### What Wakem is NOT
 *   **NOT a Generative AI:** Wakem does not generate text, code, or images. It doesn't have its own "brain."
@@ -36,8 +36,7 @@ Wakem operates on a **Context -> Predict -> Prime -> Warm** cycle:
 1.  **Context Analysis**: When you "use" a project, Wakem scans the directory for structure and markers.
 2.  **Skill Discovery**: It identifies skills by scanning for all Markdown (`.md`) files within your specified project directory.
 3.  **Prediction Engine**: Using internal rules, it determines which of your installed models is best suited for the current project.
-4.  **Priming**: It sends your predefined prompts and project context to the model, ensuring it understands your requirements before you even start working.
-5.  **Warmup**: It maintains a connection to your backend (like Ollama) to ensure the model stays active in memory according to your `keep_alive` settings.
+4. **Warmup**: It sends your predefined prompts and project context to the model, ensuring it understands your requirements before you even start working. It maintains a connection to your backend (like Ollama) to ensure the model stays active in memory according to your `keep_alive` settings. 
 
 ---
 
