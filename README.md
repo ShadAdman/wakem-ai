@@ -1,7 +1,7 @@
 <h1 align="center">wakem</h1>
 
 <p align="center">
-  <video src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3hkNTM0ZHZ5dmI3cmxtM3pvMGl2OHg1bm9yeHlxYjNycGZ1MXZtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mq6SsYiNPl1WGiiZmk/giphy.gif" width="800" autoplay loop muted playsinline controls></video>
+  ()[https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3hkNTM0ZHZ5dmI3cmxtM3pvMGl2OHg1bm9yeHlxYjNycGZ1MXZtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mq6SsYiNPl1WGiiZmk/giphy.gif]
 </p>
 <p align="center"><i>(Demo video - optimized for 2x playback speed internally)</i></p>
 
