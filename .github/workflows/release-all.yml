@@ -44,6 +44,10 @@ jobs:
     needs: build-rust
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Download
         uses: actions/download-artifact@v4
         with:
@@ -96,6 +100,10 @@ jobs:
     needs: build-go
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Download
         uses: actions/download-artifact@v4
         with:
@@ -155,6 +163,10 @@ jobs:
     needs: build-kotlin
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Download
         uses: actions/download-artifact@v4
         with:
@@ -212,6 +224,10 @@ jobs:
     needs: build-typescript
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Download
         uses: actions/download-artifact@v4
         with:
