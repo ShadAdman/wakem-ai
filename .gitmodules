@@ -1,12 +1,16 @@
 [submodule "wakem-k"]
 	path = wakem-k
 	url = git@github.com:ShadAdman/wakem-k.git
+	branch = main
 [submodule "wakem-r"]
 	path = wakem-r
 	url = git@github.com:ShadAdman/wakem-r.git
+	branch = main
 [submodule "wakem-g"]
 	path = wakem-g
 	url = git@github.com:ShadAdman/wakem-g.git
+	branch = main
 [submodule "wakem-t"]
 	path = wakem-t
 	url = git@github.com:ShadAdman/wakem-t.git
+	branch = main
