@@ -56,6 +56,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           tag_name: ${{ github.ref_name }}
           files: artifacts/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   # --- GO (wakem-g) ---
   build-go:
@@ -106,6 +108,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           tag_name: ${{ github.ref_name }}
           files: artifacts/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   # --- KOTLIN (wakem-k) ---
   build-kotlin:
@@ -163,6 +167,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           tag_name: ${{ github.ref_name }}
           files: artifacts/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   # --- TYPESCRIPT (wakem-t) ---
   build-typescript:
@@ -189,7 +195,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Build
         run: |
           cd wakem-t
@@ -218,3 +224,5 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           tag_name: ${{ github.ref_name }}
           files: artifacts/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
