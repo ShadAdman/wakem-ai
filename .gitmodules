@@ -14,3 +14,7 @@
 	path = wakem-t
 	url = git@github.com:ShadAdman/wakem-t.git
 	branch = main
+[submodule "wakem-site"]
+	path = website
+	url = git@github.com:ShadAdman/wakem-site.git
+	branch = main
