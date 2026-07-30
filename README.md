@@ -122,6 +122,7 @@ Wakem is available in three official high-performance implementations:
 - **[Kotlin/Native](wakem-k/)**: Built with Kotlin Multiplatform for high-performance native binaries.
 - **[Rust](wakem-r/)**: A memory-safe, zero-cost abstraction implementation.
 - **[Golang](wakem-g/)**: Statically-linked binaries with zero external dependencies.
+- **[TypeScript](wakem-t/)**: Built with Node.js and Ink for a highly scriptable implementation.
 
 ---
 
@@ -129,3 +130,4 @@ Wakem is available in three official high-performance implementations:
 - `wakem-k`: Kotlin/Native implementation.
 - `wakem-r`: Rust implementation.
 - `wakem-g`: Go implementation.
+- `wakem-t`: TypeScript implementation.
