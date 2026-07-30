@@ -39,6 +39,32 @@ You don't need to know all four languages to make a meaningful impact!
 
 While we encourage creative solutions, the core logic and public interfaces of the CLI must remain consistent across all implementations. This ensures that a `wakem project create` command behaves exactly the same way whether the user is running the Rust binary or the Node.js package.
 
+## Testing Strategy
+
+To ensure consistency and high quality across all platforms, we use a unified testing strategy. Each platform implementation contains a `test/` directory designed for end-to-end and integration testing.
+
+### Test Environment Setup
+
+The `test/` directory simulates a user's environment by providing a local `.wakem` storage:
+- **Path**: `<platform-root>/test/.wakem`
+- **Config**: Contains `config.json` with the active project set to the platform itself (e.g., `wakem-r`).
+- **Project**: A pre-configured project pointing back to the source root (`../../`) allowing the tool to index its own source as a test subject.
+
+### Verification Workflow
+
+When developing or debugging, you should verify your changes using this local environment. 
+
+1. **Indexing**: The strategy relies on indexing the core modules. The implementation must discover skills directly from the source root (searching for `.md` files).
+2. **Prompts**: Use the standard troubleshooting prompt:
+   > "Ready yourself for troubleshooting and bug-fixing tasks by indexing the core modules."
+3. **Execution**: Run the CLI with the `HOME` environment variable set to the `test` directory to use the isolated configuration.
+
+### Runtime Requirements
+- **Runtime**: Ollama
+- **Model**: `gemma4`
+
+All contributors are encouraged to run these verification steps before submitting a PR to ensure that core features like skill discovery and project management are functioning correctly.
+
 ---
 
 Thank you for helping us make Wakem better!
