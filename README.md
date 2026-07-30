@@ -2,9 +2,8 @@
 
 
 <p align="center">
-  <img src="https://i.giphy.com/Mq6SsYiNPl1WGiiZmk.gif" alt="wakem" />
+  <video src="https://private-user-images.githubusercontent.com/19638473/628716711-16832a31-c017-4bfc-9113-771232d13329.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODUzNTQxMDgsIm5iZiI6MTc4NTM1MzgwOCwicGF0aCI6Ii8xOTYzODQ3My82Mjg3MTY3MTEtMTY4MzJhMzEtYzAxNy00YmZjLTkxMTMtNzcxMjMyZDEzMzI5Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA3MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNzI5VDE5MzY0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNhNDkxNTc4MzQ4NmM4Y2VjODczNmFjNmU5ZGM3NDI0ZTExNWY2YjA0ZTZmY2MwOTllZDU1MmI2NGEzZGNiNTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT12aWRlbyUyRm1wNCJ9.DFdnuyLqLCe5V0Xx1YXRdiusC5tzmSxf1I0KBCyBplg" width="800" autoplay loop muted playsinline controls></video>
 </p>
-
 
 <p align="center">
   <b>The official wakem ecosystem</b>
@@ -81,6 +80,38 @@ The "Set it and Forget it" mode. Starts a background process that periodically c
 ### What's Next?
 - `wakem recap`: Daily Recap (reports a summary of your last work by scanning git changes).
 - `wakem sch`: Schedule warming up (set recurring schedules like `EVERY_DAY` at a specific time or trigger `ON_STARTUP` to ensure readiness upon boot).
+
+---
+
+## Core Concepts
+
+Wakem uses several data structures to manage the warmup lifecycle:
+
+### `GlobalConfig`
+The global state shared across all projects.
+*   `activeProjectId`: The unique identifier of the project currently being used.
+*   `ollamaUrl`: The URL of the Ollama server (default: `http://localhost:11434`).
+*   `daemonIntervalMinutes`: How often the background daemon checks for updates.
+*   `warmupCooldownMinutes`: Cooldown period between automatic warmups to prevent redundant processing.
+*   `settings`: General configuration key-value pairs.
+
+### `Project`
+Defines a specific development environment.
+*   `id`: Unique identifier (Slug).
+*   `name`: Human-readable project name.
+*   `description`: Brief description of the project.
+*   `sourcePath`: Absolute path to the code repository.
+*   `skillPath`: Path to custom AI skill files.
+*   `runtimeType`: Target AI backend (e.g., `OLLAMA`).
+*   `targetModels`: List of specific models to load for this project.
+*   `enablePrediction`: If enabled, Wakem uses the Prediction Engine to select the best model based on file types and structure.
+*   `lastWarmupTimestamp`: Unix timestamp of the last successful warmup.
+
+### `ProjectContext`
+The stateful representation of a project at runtime.
+*   `project`: The project configuration.
+*   `skills`: List of loaded skill files (Markdown) from the project directory.
+*   `prompts`: List of project-specific warmup instructions.
 
 ---
 
