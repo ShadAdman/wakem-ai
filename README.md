@@ -1,7 +1,9 @@
 <h1 align="center">wakem</h1>
 
 
-  ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3hkNTM0ZHZ5dmI3cmxtM3pvMGl2OHg1bm9yeHlxYjNycGZ1MXZtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mq6SsYiNPl1WGiiZmk/giphy.gif)
+<p align="center">
+  <img src="https://i.giphy.com/Mq6SsYiNPl1WGiiZmk.gif" alt="wakem" />
+</p>
 
 
 <p align="center">
