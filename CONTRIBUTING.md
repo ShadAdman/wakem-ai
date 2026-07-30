@@ -39,6 +39,14 @@ You don't need to know all four languages to make a meaningful impact!
 
 While we encourage creative solutions, the core logic and public interfaces of the CLI must remain consistent across all implementations. This ensures that a `wakem project create` command behaves exactly the same way whether the user is running the Rust binary or the Node.js package.
 
+## Version Management
+
+To maintain consistency, we use a single source of truth for the version number:
+- **Source**: The `VERSION` file in the project root.
+- **Synchronization**: Use the `./scripts/sync-version.sh` script to propagate the version from the root `VERSION` file to all platform-specific configuration files (Cargo.toml, package.json, etc.).
+
+When bumping the version, please update the root `VERSION` file and run the synchronization script before committing.
+
 ## Testing Strategy
 
 To ensure consistency and high quality across all platforms, we use a unified testing strategy. Each platform implementation contains a `test/` directory designed for end-to-end and integration testing.
