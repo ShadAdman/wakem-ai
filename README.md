@@ -20,7 +20,7 @@ If you use local AI models (like Ollama, Llama.cpp, or LocalAI), you've likely e
 **Wakem eliminates this wait.** It acts as a bridge between your intent to work and your AI's readiness. By the time you start your IDE or terminal, Wakem has already:
 1. Loaded the models into VRAM.
 2. Primed them with your project's files, skills (Markdown files), and your specified prompts. 
-3. Predicts which model you'll need based on some predefined rules.
+3. Predicts which model you'll need based on some predefined rules. (optional, you can select your models manually)
 
 ### What Wakem is NOT
 *   **NOT a Generative AI:** Wakem does not generate text, code, or images. It doesn't have its own "brain."
@@ -78,7 +78,7 @@ Control your AI backend (default is Ollama).
 The "Set it and Forget it" mode. Starts a background process that periodically checks your active project and ensures the models are warmed up without manual intervention.
 
 ### What's Next?
-- `wakem recap`: Daily Recap (reports a summary of your last work by scanning git changes).
+- `wakem recap`: Daily Recap (reports a summary of your last work by scanning git changes. You can also provide this summery to the models as a warmup plan).
 - `wakem sch`: Schedule warming up (set recurring schedules like `EVERY_DAY` at a specific time or trigger `ON_STARTUP` to ensure readiness upon boot).
 
 ---
